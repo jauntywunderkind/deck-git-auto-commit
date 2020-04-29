@@ -216,7 +216,7 @@ const Presentation = () => (
 				1. `fs.Watch` - the general tool for watching files
 				  1. but difficult to do recursively
 				  1. still requires filtering
-				  1. some other technical concerns
+				  1. ...some other technical concerns
 			</Markdown>
 		</Slide>
 	</Deck>
