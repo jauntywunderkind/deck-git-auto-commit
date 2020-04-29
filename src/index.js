@@ -214,7 +214,7 @@ const Presentation = () => (
 				<ListItem><CodeSpan>node.js</CodeSpan> - my general style</ListItem>
 				<ListItem><CodeSpan>isomorphic-git</CodeSpan> - a native impl of git for js</ListItem>
 				<ListItem>
-					<CodeSpan>fs.Watch</CodeSpan>< - the build in tool for watching files
+					<CodeSpan>fs.Watch</CodeSpan> - the build in tool for watching files
 					<UnorderedList>
 						<ListItem>but difficult to do recursively</ListItem>
 						<ListItem>still requires filtering</ListItem>
