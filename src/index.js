@@ -208,7 +208,7 @@ const Presentation = () => (
 				<ListItem>Make commits</ListItem>
 			</UnorderedList>
 		</Slide>
-		{BigText("How?" "how", "what would i use to put this together, how would i make this go?")}
+		{BigText("How?", "how", "what would i use to put this together, how would i make this go?")}
 	</Deck>
 );
 
