@@ -211,7 +211,7 @@ const Presentation = () => (
 		{BigText("How?", "how", "what would i use to put this together, how would i make this go?")}
 		<Slide>
 			<UnorderedList>
-				<ListItem><CodeSpan>node.js</CodeSpan> - my general style</</ListItem>
+				<ListItem><CodeSpan>node.js</CodeSpan> - my general style</ListItem>
 				<ListItem><CodeSpan>isomorphic-git</CodeSpan> - a native impl of git for js</ListItem>
 				<ListItem>
 					<CodeSpan>fs.Watch</CodeSpan>< - the build in tool for watching files
