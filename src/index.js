@@ -210,6 +210,7 @@ const Presentation = () => (
 		</Slide>
 		{BigText("How?", "how", "what would i use to put this together, how would i make this go?")}
 		<Slide>
+			<Heading>Tools considered</Heading>
 			<UnorderedList>
 				<ListItem><CodeSpan>node.js</CodeSpan> - my general style</ListItem>
 				<ListItem><CodeSpan>isomorphic-git</CodeSpan> - a native impl of git for js</ListItem>
