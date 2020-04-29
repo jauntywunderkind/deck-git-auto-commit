@@ -30,7 +30,8 @@ const theme = {
 	fonts: {
 		header: '"Open Sans Condensed", Helvetica, Arial, sans-serif',
 		text: '"Open Sans Condensed", Helvetica, Arial, sans-serif'
-	}
+	},
+	space: [6, 9, 12]
 };
 // SPECTACLE_CLI_THEME_END
 
@@ -42,10 +43,10 @@ const template = () => (
 		bottom={0}
 		width={1}
 	>
-		<Box padding="0 1em">
+		<Box padding="0 0.5em">
 			<FullScreen />
 		</Box>
-		<Box padding="1em">
+		<Box padding="0.5em">
 			<Progress />
 		</Box>
 	</FlexBox>
@@ -103,32 +104,96 @@ int main()
 	return 0;
 }`);
 
+function Index(n = Number.POSITIVE_INFINITY, id) {
+	function color(i) {
+		return n >= i ? "primary" : colors.dim
+	}
+	return <Slide id={id}>
+			<Heading><CodeSpan>git-auto-commit:</CodeSpan> the talk</Heading>
+			<OrderedList>
+				<ListItem fontWeight="bolder" color={color(0)}>Background</ListItem>
+				<ListItem fontWeight="bolder" color={color(1)}><CodeSpan>git-auto-commit</CodeSpan></ListItem>
+				<ListItem fontWeight="bolder" color={color(2)}>How: <CodeSpan>watchman</CodeSpan></ListItem>
+				<ListItem fontWeight="bolder" color={color(3)}>callbacks vs asynchronous iteration</ListItem>
+				<ListItem fontWeight="bolder" color={color(3)}>How: <CodeSpan>watchman-client</CodeSpan></ListItem>
+				<ListItem fontWeight="bolder" color={color(4)}>Doing more: pushing changes</ListItem>
+				<ListItem fontWeight="bolder" color={color(4)}>Bonus: <CodeSpan>gitdoc</CodeSpan></ListItem>
+				<ListItem fontWeight="bolder" color={color(4)}>Future Improvements</ListItem>
+			</OrderedList>
+			<Notes>{id}</Notes>
+		</Slide>
+}
+
+function BigText(text, id, notes) {
+	return <Slide backgroundColor="tertiary" id={id}>
+			<FlexBox height="100%" flexDirection="column">
+				<Heading fontSize="200px">{text}</Heading>
+			</FlexBox>
+			<Notes>{notes}</Notes>
+		</Slide>
+}
+
+const colors= {
+	dim: "#ccc",
+	spice: "#ccf"
+}
+
+// womp womp spread operators not working with this babel
+const style= {
+	index: {
+		fontWeight: "bolder"
+	}
+}
+
 const Presentation = () => (
 	<Deck theme={theme} template={template} transitionEffect="fade">
 		<Slide>
-			<FlexBox height="100%">
-				<SpectacleLogo size={500} />
-			</FlexBox>
-		</Slide>
-		<Slide>
 			<FlexBox height="100%" flexDirection="column">
-				<Heading margin="0px" fontSize="150px">
-					SPECTACLE
+				<Heading margin="0px" fontSize="92px">
+					git-auto-commit
 				</Heading>
 				<Heading margin="0px" fontSize="h2">
-					A ReactJS Presentation Library
+					watching for changes & saving them
 				</Heading>
-				<Heading margin="0px 32px" color="primary" fontSize="h3">
-					Where you can write your decks in JSX, Markdown, or MDX!
+				<Image src="/public/git-logo.png" />
+				<Heading margin="0px" color="primary" fontSize="h3">
+					with a little help from Watchman
 				</Heading>
 			</FlexBox>
 			<Notes>
 				<p>
+					Welcome! Welcome to this talk on git-auto-commit, a fun utility I....
+
 					Notes are shown in presenter mode. Open up
-					localhost:3000/?presenterMode=true to see them.
+					localhost:9418/?presenterMode=true to see them.
 				</p>
 			</Notes>
 		</Slide>
+		{Index(0, "background")}
+		{BigText("Background", "background", "motivation, concern (keeping track/copy paste/check in), make better")}
+		<Slide>
+			<UnorderedList>
+				<Appear elementNum={0}>
+					<Heading fontSize="h3">Motivation: note taking, journalling</Heading>
+					<Text>My go-to means to put down information is directories of text & markdown files.</Text>
+				</Appear>
+				<Appear elementNum={1}>
+					<Heading fontSize="h3">Concern: keeping tracking of my writing over time</Heading>
+					<Text>How do I iterate on my writing & thoughts?</Text>
+				</Appear>
+				<Appear elementNum={2}>
+					<Text>Historically, I would often copy-paste to duplicate chunks of writing before starting to edit them, so as to not loose the original.</Text>
+				</Appear>
+				<Appear elementNum={3}>
+					<Text>I'd check work into git, but not frequently.</Text>
+				</Appear>
+				<Appear elementNum={4}>
+					<Heading fontSize="h3">How could I make this better?</Heading>
+				</Appear>
+			</UnorderedList>
+		</Slide>
+		{BigText("Automate It", "automate", "and that set me on the path to build")}
+		
 		<Slide
 			backgroundColor="tertiary"
 			backgroundImage="url(https://github.com/FormidableLabs/dogs/blob/master/beau.jpg?raw=true)"
