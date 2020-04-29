@@ -194,7 +194,7 @@ const Presentation = () => (
 		</Slide>
 		{BigText("Automate It", "automate", "and that set me on the path to build")}
 		<Slide>
-			<Image src="/public/go-away.jpg"/>
+			<Image src="/public/go-away.webp"/>
 		</Slide>
 		<Slide
 			backgroundColor="tertiary"
