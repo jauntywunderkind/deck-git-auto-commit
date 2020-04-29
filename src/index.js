@@ -208,6 +208,7 @@ const Presentation = () => (
 				<ListItem>Make commits</ListItem>
 			</UnorderedList>
 		</Slide>
+		{BigText("How?" "how", "what would i use to put this together, how would i make this go?")}
 		<Slide
 			backgroundColor="tertiary"
 			backgroundImage="url(https://github.com/FormidableLabs/dogs/blob/master/beau.jpg?raw=true)"
