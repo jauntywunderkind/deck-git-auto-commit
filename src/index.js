@@ -210,17 +210,19 @@ const Presentation = () => (
 		</Slide>
 		{BigText("How?", "how", "what would i use to put this together, how would i make this go?")}
 		<Slide>
-			<Markdown>
-				{`
-					1. \`node.js\` - generally my style
-					1. \`isomoprhic-git\` - a native impl of git for js
-					1. \`fs.Watch\` - the general tool for watching files
-					    1. but difficult to do recursively
-					    1. still requires filtering
-					    1. ...some other technical concerns
-					    1. which brings me to...
-				`}
-			</Markdown>
+			<UnorderedList>
+				<ListItem><CodeSpan>node.js</CodeSpan> - my general style</</ListItem>
+				<ListItem><CodeSpan>isomorphic-git</CodeSpan> - a native impl of git for js</ListItem>
+				<ListItem>
+					<CodeSpan>fs.Watch</CodeSpan>< - the build in tool for watching files
+					<UnorderedList>
+						<ListItem>but difficult to do recursively</ListItem>
+						<ListItem>still requires filtering</ListItem>
+						<ListItem>...some other technical concerns</ListItem>
+						<ListItem>which brings me to...</ListItem>
+					</UnorderedList>
+				</ListItem>
+			</UnorderedList>
 		</Slide>
 		<Slide>
 			<Image src="/public/watchman.webp" />
