@@ -198,6 +198,12 @@ const Presentation = () => (
 				<Image src="/public/go-away.webp" height="600" width="450"/>
 			</FlexBox>
 		</Slide>
+		<Slide>
+			<Heading fontSize="h2">
+				Write it!
+			</Heading>
+			<Heading><CodeSpan>git-auto-commit</Heading>
+		</Slide>
 		<Slide
 			backgroundColor="tertiary"
 			backgroundImage="url(https://github.com/FormidableLabs/dogs/blob/master/beau.jpg?raw=true)"
