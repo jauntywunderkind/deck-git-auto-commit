@@ -219,7 +219,7 @@ const Presentation = () => (
 				  1. still requires filtering
 				  1. ...some other technical concerns
 				  1. which brings me to...
-				}`
+				`}
 			</Markdown>
 		</Slide>
 		<Slide>
