@@ -209,6 +209,16 @@ const Presentation = () => (
 			</UnorderedList>
 		</Slide>
 		{BigText("How?", "how", "what would i use to put this together, how would i make this go?")}
+		<Slide>
+			<Markdown>
+				1. `node.js` - generally my style
+				1. `isomoprhic-git` - a native impl of git for js
+				1. `fs.Watch` - the general tool for watching files
+				  1. but difficult to do recursively
+				  1. still requires filtering
+				  1. some other technical concerns
+			</Markdown>
+		</Slide>
 	</Deck>
 );
 
