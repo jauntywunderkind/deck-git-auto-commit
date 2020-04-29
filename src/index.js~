@@ -104,9 +104,9 @@ int main()
 	return 0;
 }`);
 
-function Index(n = Number.POSITIVE_INFINITY, id) {
+function Index(n = 0, id) {
 	function color(i) {
-		return n >= i ? "primary" : colors.dim
+		return n <= i ? "primary" : colors.dim
 	}
 	return <Slide id={id}>
 			<Heading><CodeSpan>git-auto-commit:</CodeSpan> the talk</Heading>
@@ -194,7 +194,7 @@ const Presentation = () => (
 		</Slide>
 		{BigText("Automate It", "automate", "and that set me on the path to build")}
 		<Slide>
-			<Image src="/public/go-away.jpg"/>
+			<Image src="/public/go-away.webp"/>
 		</Slide>
 		<Slide
 			backgroundColor="tertiary"
