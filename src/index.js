@@ -203,6 +203,10 @@ const Presentation = () => (
 				Write it!
 			</Heading>
 			<Heading><CodeSpan>git-auto-commit</CodeSpan></Heading>
+			<UnorderedList>
+				<ListItem>Watch the file system</ListItem>
+				<ListItem>Make commits</ListItem>
+			</UnorderedList>
 		</Slide>
 		<Slide
 			backgroundColor="tertiary"
