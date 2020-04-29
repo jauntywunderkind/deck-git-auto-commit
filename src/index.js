@@ -202,7 +202,7 @@ const Presentation = () => (
 			<Heading fontSize="h2">
 				Write it!
 			</Heading>
-			<Heading><CodeSpan>git-auto-commit</Heading>
+			<Heading><CodeSpan>git-auto-commit</CodeSpan></Heading>
 		</Slide>
 		<Slide
 			backgroundColor="tertiary"
