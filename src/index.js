@@ -226,7 +226,9 @@ const Presentation = () => (
 			</UnorderedList>
 		</Slide>
 		<Slide>
-			<Image src="/public/watchman.png" width="50%" padding="0 auto"/>
+			<FlexBox width="100%" flexDirection="row">
+				<Image src="/public/watchman.png" width="50%"/>
+			</FlexBox>
 		</Slide>
 	</Deck>
 );
