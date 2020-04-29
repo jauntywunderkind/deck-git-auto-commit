@@ -227,7 +227,7 @@ const Presentation = () => (
 		</Slide>
 		<Slide>
 			<FlexBox width="100%" flexDirection="row">
-				<Image src="/public/watchman.png" width="50%"/>
+				<Image src="/public/watchman.png" margin="100" width="50%"/>
 			</FlexBox>
 		</Slide>
 	</Deck>
