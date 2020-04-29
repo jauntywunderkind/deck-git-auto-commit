@@ -226,7 +226,7 @@ const Presentation = () => (
 			</UnorderedList>
 		</Slide>
 		<Slide>
-			<Image src="/public/watchman.png" />
+			<Image src="/public/watchman.png" width="50%" />
 		</Slide>
 	</Deck>
 );
